@@ -9,7 +9,9 @@ A dynamical systems theory project focused on the mathematical modeling, analysi
 
 This project approximates the human body as an **inverted pendulum hinged at the ankle** and utilizes modern state-space control techniques to stabilize the inherently unstable upright posture against external perturbations.
 
-![Simulink Model Overview](Immagini\simulink_total.png)
+<p align="center">
+  <img src="Immagini\simulink_total.png" width="600" alt="Simulink model overview">
+</p>
 *Simulink architecture integrating body dynamics, muscle activation, Full State Feedback, and the Luenberger Observer.*
 
 ## 🚀 Engineering Highlights
