@@ -9,7 +9,7 @@ A dynamical systems theory project focused on the mathematical modeling, analysi
 
 This project approximates the human body as an **inverted pendulum hinged at the ankle** and utilizes modern state-space control techniques to stabilize the inherently unstable upright posture against external perturbations.
 
-![Simulink Model Overview](link_inserisci_qui_uno_screen_del_modello_simulink_principale.png)
+![Simulink Model Overview](Immagini\simulink_total.png)
 *Simulink architecture integrating body dynamics, muscle activation, Full State Feedback, and the Luenberger Observer.*
 
 ## 🚀 Engineering Highlights
@@ -30,8 +30,8 @@ The human upright posture is naturally unstable. Through mathematical modeling, 
 The open-loop analysis of the linearized state matrix ($A$) revealed an eigenvalue in the right-half plane ($\lambda \approx 4.09$). The impulse response simulation confirmed that without active neuromuscular control, the system diverges exponentially (the person falls).
 
 <p align="center">
-  <img src="link_al_grafico_impulse_response_open_loop.png" width="45%" title="Open Loop - Diverging" />
-  <img src="link_al_grafico_impulse_response_closed_loop.png" width="45%" title="Closed Loop - Stabilized" />
+  <img src="Immagini\impulse response.png" width="45%" title="Open Loop - Diverging" />
+  <img src="Immagini\impulse_response_cl.png" width="45%" title="Closed Loop - Stabilized" />
 </p>
 *Left: Unstable open-loop impulse response. Right: Asymptotically stabilized closed-loop response.*
 
@@ -48,7 +48,7 @@ To stabilize the pendulum, the closed-loop poles were aggressively placed at $\l
 In real-world scenarios, equipping a patient/robot with sensors for every internal state is impractical. An asymptotic observer was designed with faster poles (e.g., $[-15, -20, -30]$) to track the real system. 
 The simulations prove that the estimation error rapidly converges to zero $lim_{t \to \infty} e(t) = 0$, allowing the controller to rely entirely on the estimated states $\hat{x}$.
 
-![Observer Tracking Plot](link_al_grafico_del_tracking_dell_osservatore.png)
+
 *Performance of the Luenberger Observer: The estimated angular velocity (blue) rapidly converging to the real physical state (yellow).*
 
 ## 💻 Repository Structure
